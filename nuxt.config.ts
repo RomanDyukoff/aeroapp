@@ -32,12 +32,14 @@ export default defineNuxtConfig({
 		'@nuxt/image',
 	],
 
+	imports: {
+		dirs: ['entities/*/model', 'features/*/model'],
+	},
+
 	typescript: {
 		strict: true,
 		typeCheck: true,
 	},
 
-	imports: {
-		dirs: ['entities/*/model', 'features/*/model'],
-	},
+	css: ['@/app/styles/global.scss'],
 });
